@@ -42,17 +42,44 @@ jobs:
           cp public/robots-dev.txt dist/robots.txt
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: github-pages
           path: dist
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: dist
+
+      - name: Unzip artifact
+        run: |
+          cd dist
+          tar -xf artifact.tar
+          rm artifact.tar
+
+      - name: Deploy to Preview Repo
+        env:
+          PREVIEW_TOKEN: ${{ secrets.PREVIEW_REPO_TOKEN }}
+        run: |
+          cd dist
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Configure git credentials securely
+          git config credential.helper store
+          echo "https://x-access-token:${PREVIEW_TOKEN}@github.com" > ~/.git-credentials
+          
+          git add .
+          git commit -m "Deploy preview from ${{ github.sha }}"
+          git remote add origin https://github.com/medical-informatics-platform/mip-website-preview.git
+          git push -f origin main:gh-pages
+          
+          # Clean up credentials
+          rm ~/.git-credentials
