@@ -57,12 +57,6 @@ jobs:
           name: github-pages
           path: dist
 
-      - name: Unzip artifact
-        run: |
-          cd dist
-          tar -xf artifact.tar
-          rm artifact.tar
-
       - name: Deploy to Preview Repo
         env:
           PREVIEW_TOKEN: ${{ secrets.PREVIEW_REPO_TOKEN }}
