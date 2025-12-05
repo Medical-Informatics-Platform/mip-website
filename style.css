@@ -1,0 +1,497 @@
+:root {
+    --primary-color: #0b2846;
+    --secondary-color: #007bff;
+    --text-color: #212529;
+    --text-light: #6c757d;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --footer-bg: #0b2846;
+    --font-family: 'Roboto', -apple-system, "system-ui", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --container-width: 1140px;
+    --header-height: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.5;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 40px;
+}
+
+/* Header */
+.site-header {
+    height: var(--header-height);
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 0 40px;
+}
+
+.site-header.scrolled {
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.18);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+#placeholder-nav {
+    height: 80px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.mip-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 48px;
+    color: #0c0c0c;
+    text-decoration: none;
+    border-right: 1px solid #0c0c0c;
+    padding-right: 15px;
+}
+
+.ebrains-logo {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#ebrains-logo-web {
+    height: 40px;
+    min-width: 160px;
+}
+
+#ebrains-logo-web .s0 {
+    fill: #383838;
+}
+
+#ebrains-logo-web .s1 {
+    fill: url(#g1);
+}
+
+/* Navigation */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0c0c0c;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 8px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #4e4e4e;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Sections - General */
+section {
+    margin-top: 40px;
+    min-height: 400px;
+}
+
+section .img-fluid {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.box {
+    align-self: center;
+    padding: 15px;
+}
+
+.box .title {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.box .title.text-center {
+    text-align: center;
+}
+
+.box p {
+    font-weight: 100;
+    text-align: justify;
+}
+
+.box .link {
+    margin-top: 20px;
+    text-transform: uppercase;
+    display: block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.box .link:hover {
+    text-decoration: underline;
+}
+
+/* Intro Section */
+#Intro {
+    scroll-margin-top: 100px;
+}
+
+.intro-row {
+    display: flex;
+    align-items: center;
+    min-height: 65vh;
+}
+
+.intro-content {
+    flex: 0 0 41.666%;
+    max-width: 41.666%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.intro-image {
+    flex: 0 0 58.333%;
+    max-width: 58.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* Federations Section */
+#Federations {
+    scroll-margin-top: 250px;
+    background-image: url('/img/section2.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.cards {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    row-gap: 40px;
+    column-gap: 50px;
+}
+
+.card-fed {
+    min-width: 280px;
+    max-width: 350px;
+    flex: 1 1 280px;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 5px 27px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-fed:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.card-stats {
+    font-size: 13px;
+    color: var(--text-light);
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card-stats span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.card-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.card-link:after {
+    content: '→';
+    margin-left: 5px;
+    transition: margin-left 0.3s;
+}
+
+.card-link:hover:after {
+    margin-left: 10px;
+}
+
+/* Documentation Section */
+#Documentation {
+    scroll-margin-top: 250px;
+    margin-top: 130px;
+    margin-bottom: 100px;
+}
+
+.doc-row {
+    display: flex;
+    align-items: center;
+    min-height: 65vh;
+}
+
+.doc-image {
+    flex: 0 0 58.333%;
+    max-width: 58.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.doc-content {
+    flex: 0 0 41.666%;
+    max-width: 41.666%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.15s ease-in-out;
+    font-size: 16px;
+    border: 1px solid transparent;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-logos {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-logo {
+    height: 40px;
+    opacity: 0.9;
+    filter: brightness(0) invert(1);
+}
+
+.footer-text {
+    font-size: 14px;
+    opacity: 0.8;
+    color: var(--white);
+}
+
+.footer-links {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    width: 100%;
+}
+
+.footer-links p {
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.eu-funding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eu-flag {
+    height: 45px;
+}
+
+.eu-funding-text {
+    color: var(--white);
+    font-size: 13px;
+    line-height: 1.3;
+    opacity: 0.9;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.legal-links a:hover {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .card-fed {
+        width: 40%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .intro-row,
+    .doc-row {
+        flex-direction: column;
+    }
+
+    .intro-content,
+    .intro-image,
+    .doc-content,
+    .doc-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .doc-row {
+        flex-direction: column-reverse;
+    }
+
+    .box .title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .card-fed {
+        width: 90%;
+        max-width: 95%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .site-header {
+        padding: 0 20px;
+    }
+
+    .mip-text {
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Public MIP",
+    "nbRecords": 524133,
+    "description": "The PUBLIC-MIP installed on the EBRAINS RI and available via EBRAINS accreditation on the EBRAINS website. EBRAINS users can explore the service with no requirement for installation or download. Analyse online all data placed in the public MIP and test the available MIP analytical tools.",
+    "link": "https://hbpmip.link"
+  },
+  {
+    "title": "FERES - Federating European Registries for Stroke",
+    "nbNodes": 7,
+    "nbRecords": 110413,
+    "description": "National Stroke Registries have played an essential role in accelerating stroke research that affects the advancement and delivery of effective, high-quality care. One of the main objectives of FERES is the development of a framework to impulse the re-use of health data collected in routine clinical practice.",
+    "link": "https://stroke.hbpmip.link"
+  },
+  {
+    "title": "Dementia",
+    "nbNodes": 3,
+    "nbRecords": 6348,
+    "description": "The dementia federation primarily illustrates the feasibility and value of federating real-world clinical data collected during routine medical practice, representing the full spectrum of patient profiles, in comparison with structured research cohort data from more biased populations.",
+    "link": "https://dementia.hbpmip.link/"
+  },
+  {
+    "title": "French Epilepsy Network – REPOMSE",
+    "nbNodes": 15,
+    "nbRecords": 1072,
+    "description": "The French epilepsy network federates data from 1072 patients over 15 years of age, suffering from drug-resistant partial epilepsy and who started pre-surgical video-EEG monitoring. Recruitment was based on the 15 largest French centres for adult epileptology and video-EEG monitoring.",
+    "link": "https://repomse.hbpmip.link"
+  },
+  {
+    "title": "Traumatic Brain Injury (TBI)",
+    "nbNodes": 2,
+    "nbRecords": 10500,
+    "description": "This federation includes representatives from the two largest worldwide TBI research cohorts, CREACTIVE (Collaborative Research on Acute Traumatic brain Injury in intensiVE care medicine in Europe) and Center-TBI, which are part of a major clinical research initiative InTBIR.",
+    "link": "https://tbi.hbpmip.link/"
+  },
+  {
+    "title": "Epilepsy",
+    "nbNodes": 15,
+    "nbRecords": 5970,
+    "description": "This EBRAINS-embedded federation includes 15 nodes assigned to Epilepsy centers from the European Reference Network EpiCARE, with a plan to increase to around 30 centers. It offers a data model of about 1000 CDEs, providing deeply phenotyped data of epilepsy patients.",
+    "link": "https://epilepsy.hbpmip.link"
+  },
+  {
+    "title": "Mental Health",
+    "nbNodes": 2,
+    "nbRecords": 7300,
+    "description": "The federation aims at exploring large-scale Mental Health datasets including clinical signs and symptoms, together with structured neuropsychological assessments and brain imaging data. Data are derived from a pool of individuals in a longitudinal fashion as part of the IMAGEN database.",
+    "link": "https://mentalhealth.hbpmip.link/"
+  }
+]
