@@ -4,7 +4,7 @@ import { marked } from 'marked'
 // Fetch and render Federations
 async function loadFederations() {
   try {
-    const response = await fetch('/content/federations.json');
+    const response = await fetch('content/federations.json');
     const federations = await response.json();
     const grid = document.getElementById('federations-grid');
 
@@ -31,7 +31,7 @@ async function loadFederations() {
 // Fetch and render Documentation text
 async function loadDocumentation() {
   try {
-    const response = await fetch('/content/documentation.md');
+    const response = await fetch('content/documentation.md');
     const text = await response.text();
     const docContainer = document.getElementById('doc-text');
 
