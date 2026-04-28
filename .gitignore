@@ -4,6 +4,13 @@ node_modules/
 # Build output
 dist/
 
+# Generated static-site artifacts copied from build output
+/assets/
+/content/
+/img/
+/robots.txt
+/robots-dev.txt
+
 # OS generated files
 .DS_Store
 Thumbs.db

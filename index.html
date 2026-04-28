@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -19,7 +18,7 @@
         <header class="site-header">
             <div class="container">
                 <div class="logo">
-                    <a href="/" class="mip-text">MIP</a>
+                    <a href="/" class="mip-logo-link"><img src="/img/mip-logo-short-compact.png" alt="MIP" class="mip-logo"></a>
                     <a href="https://ebrains.eu/" target="_blank" rel="noopener noreferrer" class="ebrains-logo">
                         <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1508 457" width="160"
                             height="40" id="ebrains-logo-web">
@@ -54,50 +53,70 @@
                         </svg>
                     </a>
                 </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#top">Home</a></li>
-                        <li><a href="#Federations">Federations</a></li>
-                        <li><a href="#Documentation">Documentation</a></li>
-                    </ul>
-                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
-                    </button>
-                </nav>
             </div>
         </header>
         <div id="placeholder-nav"></div>
 
         <main>
-            <section id="Intro">
+            <section id="Intro" class="hero-section">
                 <div class="container">
-                    <div class="intro-row">
-                        <div class="intro-content">
-                            <div class="box">
-                                <div class="title">Medical Informatics Platform</div>
-                                <p>A powerful federated data processing and analysis system that preserves patient
-                                    privacy</p>
-                                <a class="link" href="#Federations">See federations</a>
+                    <div class="hero-shell">
+                        <div class="hero-copy-panel">
+                            <p class="hero-eyebrow">Medical Informatics Platform</p>
+                            <h1 class="hero-title">Explore the frontiers of <span>clinical discovery.</span></h1>
+                            <p class="hero-subtitle">
+                                Access decentralized real-world data across medical centers.
+                                Perform secure analysis while preserving patient privacy using
+                                our federated architecture.
+                            </p>
+                            <div class="hero-actions">
+                                <a class="btn btn-primary" href="https://datacatalogue.mip.ebrains.eu/#federations">Explore Network</a>
+                                <a class="hero-link" href="#Documentation">Learn More</a>
+                            </div>
+                            <div class="hero-stats" aria-label="Platform network highlights">
+                                <div class="hero-stat">
+                                    <span class="hero-stat-value">30+</span>
+                                    <span class="hero-stat-label">Hospitals</span>
+                                </div>
+                                <div class="hero-stat-divider"></div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-value">500k+</span>
+                                    <span class="hero-stat-label">Patients</span>
+                                </div>
+                                <div class="hero-stat-divider"></div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-value">12</span>
+                                    <span class="hero-stat-label">Countries</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="intro-image">
-                            <img class="img-fluid" src="/img/section1.png" alt="MIP user interface">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="Federations">
-                <div class="container-fluid">
-                    <div class="box">
-                        <div class="title text-center">Federations</div>
-                        <div id="federations-grid" class="cards">
-                            <!-- Federation cards will be injected here via JS -->
+                        <div class="hero-media">
+                            <div class="preview-frame demo-window">
+                                <button class="expand-preview-btn" type="button" aria-expanded="false" aria-label="Expand preview">
+                                    <svg class="preview-toggle-icon icon-expand" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <polyline points="9 21 3 21 3 15"></polyline>
+                                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                                    </svg>
+                                    <svg class="preview-toggle-icon icon-collapse" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 3 3 3 3 9"></polyline>
+                                        <polyline points="15 21 21 21 21 15"></polyline>
+                                        <line x1="3" y1="3" x2="10" y2="10"></line>
+                                        <line x1="21" y1="21" x2="14" y2="14"></line>
+                                    </svg>
+                                </button>
+                                <div class="window-content scrollable">
+                                    <div class="scroll-container">
+                                        <img class="hero-screenshot demo-screenshot full-view"
+                                            src="/img/platform-screenshot.png" alt="MIP platform interface preview">
+                                    </div>
+                                    <div class="scroll-hint">
+                                        <span class="mouse-icon"></span>
+                                        <span class="hint-text">Scroll to explore</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,7 +139,7 @@
                                 </div>
                                 <div class="mt-3">
                                     <a target="_blank" class="btn btn-primary"
-                                        href="https://github.com/Medical-Informatics-Platform/mip-docs">
+                                        href="https://github.com/Medical-Informatics-Platform/mip">
                                         <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor"
                                             style="margin-right: 8px;">
                                             <path
@@ -137,24 +156,81 @@
             </section>
         </main>
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logos">
-                        <div class="eu-funding">
-                            <img src="/img/eu-fund-logo.png" alt="EU Flag" class="eu-flag">
-                            <span class="eu-funding-text">Co-funded by<br>the European Union</span>
+        <footer class="site-footer main-footer">
+            <div class="container footer-container">
+                <div class="footer-shell footer-shell-compact">
+                    <div class="footer-column brand-col">
+                        <div class="footer-logo-row">
+                            <img src="/img/mip-logo-short-compact.png" alt="MIP logo" class="footer-logo">
                         </div>
-                        <img src="/img/ebrains-logo.svg" alt="EBRAINS Logo" class="footer-logo">
+                        <p class="footer-brand-title">Medical Informatics Platform</p>
+                        <p class="footer-brand-desc">
+                            A federated privacy-preserving research infrastructure for clinical data analysis across Europe.
+                        </p>
                     </div>
-                    <div class="footer-links">
-                        <p>&copy; 2025 EBRAINS. All rights reserved.</p>
+
+                    <div class="footer-column institutional-col">
+                        <p class="footer-col-title">Powered by</p>
+                        <div class="institutional-logos">
+                            <a href="https://www.athenarc.gr/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <img src="/img/athenarc.png" alt="Athena Research Center logo" class="partner-logo athena-logo">
+                            </a>
+                            <a href="https://www.ebrains.eu/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <img src="/img/logo_ebrains.png" alt="EBRAINS logo" class="partner-logo ebrains-logo">
+                            </a>
+                            <a href="https://www.chuv.ch/" target="_blank" rel="noopener noreferrer" class="partner-link chuv-link">
+                                <img src="/img/CHUV_Logo_Simple_BLANC.png" alt="CHUV logo" class="partner-logo chuv-logo">
+                            </a>
+                        </div>
+                        <div class="footer-funding-section" aria-label="Project funding acknowledgements">
+                            <p class="footer-col-title footer-funding-title">Co-funded by</p>
+                            <div class="footer-funding-logos">
+                                <div class="footer-funding-item footer-funding-item-eu" tabindex="0" aria-describedby="footer-funding-tooltip">
+                                    <div class="footer-funding-visual footer-funding-visual-eu">
+                                        <img src="/img/eu-flag.svg" alt="European Union flag" class="footer-funding-flag">
+                                        <span class="footer-funding-box-name">European Union</span>
+                                    </div>
+                                    <div class="footer-funding-tooltip" id="footer-funding-tooltip" role="tooltip">
+                                        <p class="footer-tooltip-title">Funding acknowledgement</p>
+                                        <p class="footer-tooltip-text">
+                                            This work was co-funded by the European Union’s Horizon 2020 Framework Partnership Agreement (No. 650003) for the Human Brain Project, and by the Horizon Europe research and innovation programme through the EBRAINS 2.0 project (grant agreement No. 101147319; SERI contract No. 23.00638).
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="footer-funding-item footer-funding-item-seri" tabindex="0" aria-describedby="footer-funding-tooltip-seri">
+                                    <div class="footer-funding-visual footer-funding-visual-seri">
+                                        <div class="seri-mark" aria-hidden="true">
+                                            <span class="seri-mark-flag"></span>
+                                        </div>
+                                        <span class="footer-funding-box-name footer-funding-box-name-seri">
+                                            State Secretariat for Education, Research and Innovation
+                                        </span>
+                                    </div>
+                                    <div class="footer-funding-tooltip" id="footer-funding-tooltip-seri" role="tooltip">
+                                        <p class="footer-tooltip-title">Funding acknowledgement</p>
+                                        <p class="footer-tooltip-text">
+                                            This work was co-funded by the European Union’s Horizon 2020 Framework Partnership Agreement (No. 650003) for the Human Brain Project, and by the Horizon Europe research and innovation programme through the EBRAINS 2.0 project (grant agreement No. 101147319; SERI contract No. 23.00638).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <div class="footer-bottom footer-bottom-compact">
+                    <p class="footer-copyright">
+                        <span class="copyright-symbol">© 2015-2026</span>
+                        <a href="https://www.humanbrainproject.eu/" target="_blank" rel="noopener noreferrer" class="footer-meta-link">Human Brain Project</a>
+                        <span class="footer-divider">/</span>
+                        <a href="https://www.ebrains.eu/" target="_blank" rel="noopener noreferrer" class="footer-meta-link">EBRAINS</a>
+                        <span class="footer-copy-end">All rights reserved.</span>
+                    </p>
                 </div>
             </div>
         </footer>
     </div>
-    <script type="module" src="src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
     <!-- Matomo -->
     <script>
         var _paq = window._paq = window._paq || [];
