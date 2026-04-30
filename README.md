@@ -10,7 +10,7 @@ The MIP is a powerful federated data processing and analysis system that enables
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [Node.js](https://nodejs.org/) (v20.19 or higher recommended)
 - npm (comes with Node.js)
 
 ### Installation
