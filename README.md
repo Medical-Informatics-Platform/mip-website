@@ -63,14 +63,11 @@ The site uses GitHub Actions for CI/CD:
 | Branch/Tag | Deployment | Indexing |
 |------------|------------|----------|
 | `dev` | Automatic on push | Blocked (noindex) |
-| `v*` tags | Automatic on tag | Allowed |
+| `main` / `master` | Automatic on push | Allowed |
 
 ### Deploy to Production
 
-```bash
-git tag v1.0.0
-git push origin v1.0.0
-```
+Production deploys are triggered automatically when changes are pushed to `main` or `master`.
 
 ## License
 
